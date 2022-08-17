@@ -24,7 +24,7 @@ class ArbResource {
 
 class ArbResourceValue {
   String text;
-  final placeholders = List<ArbResourcePlaceholder>();
+  final placeholders = <ArbResourcePlaceholder>[];
 
   bool get hasPlaceholders => placeholders.isNotEmpty;
 
@@ -46,7 +46,7 @@ var _regex = RegExp("\\{(.+?)\\}");
 
 List<ArbResourcePlaceholder> findPlaceholders(String text) {
   if (text == null || text.isEmpty) {
-    return List<ArbResourcePlaceholder>();
+    return <ArbResourcePlaceholder>[];
   }
 
   var matches = _regex.allMatches(text);

@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:arb/dart_arb.dart';
 
-import 'arb_document.dart';
 
 class ArbProject {
   final String fileName;
